@@ -1,0 +1,77 @@
+[
+  {
+    "item": "首屏标题存在",
+    "ok": true,
+    "detail": "神经网络：从一条直线推到反向传播"
+  },
+  {
+    "item": "导航章节数 = 13",
+    "ok": true,
+    "detail": "实际 13"
+  },
+  {
+    "item": "第1章正文含关键句",
+    "ok": true,
+    "detail": "第 1 章：函数是一台机器 难度：★☆☆ | 预估学时：0."
+  },
+  {
+    "item": "章节内 SVG 渲染",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "item": "KaTeX 公式渲染数 > 20",
+    "ok": true,
+    "detail": "实际 106"
+  },
+  {
+    "item": "概念 c04 有折叠深度片段",
+    "ok": true,
+    "detail": "实际 1"
+  },
+  {
+    "item": "深度片段可展开",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "item": "诊断页存在",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "item": "测验有判题反馈",
+    "ok": true,
+    "detail": "✓ 正确"
+  },
+  {
+    "item": "搜索“反向传播”有结果",
+    "ok": true,
+    "detail": "实际 20"
+  },
+  {
+    "item": "无 KaTeX 渲染错误",
+    "ok": true,
+    "detail": "实际 0"
+  },
+  {
+    "item": "Mermaid 已渲染",
+    "ok": true,
+    "detail": "实际 1"
+  },
+  {
+    "item": "移动端有 16px 以上内容边距",
+    "ok": true,
+    "detail": "padding=18px, h1.x=18"
+  },
+  {
+    "item": "移动端无横向溢出",
+    "ok": true,
+    "detail": "scrollWidth=390"
+  },
+  {
+    "item": "控制台无错误",
+    "ok": true,
+    "detail": ""
+  }
+]

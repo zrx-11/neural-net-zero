@@ -5,7 +5,7 @@
 ## 打开方式
 
 - 本地：双击 `index.html`，或拖进浏览器。
-- 在线：把整个目录推到 GitHub 仓库并开启 Pages（见下）。
+- 在线：<https://zrx-11.github.io/neural-net-zero/> （已部署在 GitHub Pages）。
 
 公式用 KaTeX 渲染，流程图用 Mermaid，两者走 CDN。**离线时公式会显示源码，文字、导航、测验仍然可用。** 首次打开建议联网。
 
@@ -49,6 +49,8 @@ python3 <知枢技能目录>/scripts/build_companion.py --manifest manifest.json
 ```
 
 ## 部署到 GitHub Pages
+
+当前已部署：仓库 [zrx-11/neural-net-zero](https://github.com/zrx-11/neural-net-zero)，线上地址 <https://zrx-11.github.io/neural-net-zero/>，分支 `main`、目录 `/(root)`。以下步骤供换账号或重建时参考。
 
 第一次建仓：
 

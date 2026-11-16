@@ -4,7 +4,7 @@
 
 - Python 3.12.11
 - Playwright + 系统 Chromium（`/usr/local/bin/chromium`）
-- 构建脚本：知枢 `scripts/build_companion.py`（v1.4.0）
+- 构建脚本：知枢 `scripts/build_companion.py`（v1.4.1）
 - 生成时间：2026-11-16
 
 ## 数值来源
@@ -64,3 +64,21 @@
 - 页面内三处多行 `$$` 公式被渲染器拼入 `\\`，KaTeX 会输出 `newLineInDisplayMode` 警告（warning 级，不影响渲染结果）。属已知行为。
 - 手工异或网络使用阶跃函数，仅证明表达力，不可用于训练。
 - 进度存 `localStorage`，换设备需用导出/导入 JSON。
+
+## 部署记录（2026-11-16）
+
+- 仓库：`zrx-11/neural-net-zero`（public，`main`，`/(root)`）
+- 线上地址：<https://zrx-11.github.io/neural-net-zero/>
+- 路径：GitHub REST API 建仓 → `git push`（47 文件）→ Pages API 开启（`source: {branch: main, path: /}`）
+- 线上验证（Playwright，真实网络，8/8）：首页标题、13 章导航、KaTeX 公式 >100、公式错误 0、Mermaid SVG、c11 深度片段可展开、测验判题、控制台 0 error
+- 截图：`screenshots/online-home.png`、`screenshots/online-c11-depth.png`
+
+## 知枢技能同步修复（1.4.1）
+
+同一类问题不只在单书脚本里，1.4.1 一并处理：
+
+1. `build_handbook.py` 的 Mermaid 首源换成 jsDelivr `10.9.1`（npmmirror 的 `mermaid/10/files/...` 连不通，放首位等于每次白等 6 秒超时）。
+2. `build_handbook.py` 的 KaTeX css/js 数组把 jsDelivr 提前（npmmirror 能通但首源慢）。
+3. `build_handbook.py` 的 `discover` 支持「目录里只有一个 `index.html`」的单书 Pages 形态。此前把 `index.html` 排除在伴侣候选外，导致本项目这种交付形态做多书总入口时报「未发现任何书」；修复后同一目录构建出 342 KB 总入口，章节/公式/Mermaid/测验回归 6/6。
+
+版本与改动记录写在技能目录 `CHANGELOG.md` 的 1.4.1 条目，踩坑清单加第 18 条。
